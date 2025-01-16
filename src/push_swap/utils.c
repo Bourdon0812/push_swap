@@ -6,7 +6,7 @@
 /*   By: ilbonnev <ilbonnev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 15:30:35 by ilbonnev          #+#    #+#             */
-/*   Updated: 2025/01/16 16:00:38 by ilbonnev         ###   ########.fr       */
+/*   Updated: 2025/01/16 16:54:31 by ilbonnev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,13 +77,11 @@ t_list	*convert_to_list(int argc, char **argv)
 		if (!new)
 		{
 			ft_lstclear(&args);
-			//free_tab(split);
 			return (NULL);
 		}
 		ft_lstadd_back(&args, new);
 		i++;
 	}
-	//free_tab(split);
 	return (args);
 }
 

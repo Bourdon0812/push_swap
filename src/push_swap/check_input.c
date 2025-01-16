@@ -6,7 +6,7 @@
 /*   By: ilbonnev <ilbonnev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 15:02:00 by ilbonnev          #+#    #+#             */
-/*   Updated: 2025/01/16 14:15:03 by ilbonnev         ###   ########.fr       */
+/*   Updated: 2025/01/16 16:56:58 by ilbonnev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,15 @@ static int	check_contains(char **argv)
 	while (argv[++i] != NULL)
 	{
 		if (ft_strlen(argv[i]) < 1)
-			return (ft_puterror("Error\nIl n'y a pas que des nombres de saisis\n"));
+			return (ft_puterror("Error\npas que des nombres\n"));
 		i2 = 0;
 		while (argv[i][i2] != '\0')
 		{
-			if (argv[i][i2] != ' '&& argv[i][i2] != '\0')
+			if (argv[i][i2] != ' ' && argv[i][i2] != '\0')
 				break ;
 			i2++;
 			if (argv[i][i2] == '\0')
-				return (ft_puterror("Error\nIl n'y a pas que des nombres de saisis\n"));
+				return (ft_puterror("Error\npas que des nombres\n"));
 		}
 	}
 	return (1);
@@ -45,13 +45,13 @@ static int	check_int(char **argv)
 	{
 		i2 = -1;
 		if (argv[i][0] == '-' && ft_strlen(argv[i]) <= 1)
-			return (ft_puterror("Error\nIl n'y a pas que des nombres de saisis\n"));
+			return (ft_puterror("Error\npas que des nombres\n"));
 		if (argv[i][0] == '-')
 			i2++;
 		while (argv[i][++i2] != '\0')
 		{
 			if (!(argv[i][i2] >= '0' && argv[i][i2] <= '9'))
-				return (ft_puterror("Error\nIl n'y a pas que des nombres de saisis\n"));
+				return (ft_puterror("Error\npas que des nombres\n"));
 		}
 	}
 	return (1);
@@ -67,7 +67,7 @@ static int	check_max(char **argv)
 	{
 		n = ft_atoi(argv[i]);
 		if (n < INT_MIN || n > INT_MAX)
-			return (ft_puterror("Error\nIl n'y a pas que des int de saisis\n"));
+			return (ft_puterror("Error\npas que des int\n"));
 	}
 	return (1);
 }
@@ -76,7 +76,7 @@ static int	check_dup(char **argv)
 {
 	int	i;
 	int	n;
-	
+
 	i = 0;
 	while (argv[i] != NULL)
 	{
@@ -96,7 +96,7 @@ int	check_input(int argc, char **argv)
 {
 	int		size;
 	char	**args;
-	
+
 	size = 1;
 	if (argc <= 1)
 		return (0);

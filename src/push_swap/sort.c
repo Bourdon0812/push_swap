@@ -6,7 +6,7 @@
 /*   By: ilbonnev <ilbonnev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 16:06:41 by ilbonnev          #+#    #+#             */
-/*   Updated: 2025/01/16 15:13:32 by ilbonnev         ###   ########.fr       */
+/*   Updated: 2025/01/16 17:05:37 by ilbonnev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,12 +44,12 @@ void	sorts3(t_list **a)
 void	sort(t_list **a, t_list **b)
 {
 	int	size;
-	
+
 	size = ft_lstsize(*a);
 	if (size == 2)
 		sorts2(a);
 	else if (size == 3)
-		sorts3(b);
+		sorts3(a);
 	else if (size > 3)
 		quick_sort(a, b);
 }
