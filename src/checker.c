@@ -6,7 +6,7 @@
 /*   By: ilbonnev <ilbonnev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 14:41:25 by ilbonnev          #+#    #+#             */
-/*   Updated: 2025/01/16 17:46:14 by ilbonnev         ###   ########.fr       */
+/*   Updated: 2025/01/16 18:09:28 by ilbonnev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,9 +74,9 @@ int	main(int argc, char **argv)
 	int		check;
 
 	b = NULL;
-	if (!check_input(argc -1, argv + 1))
+	if (!check_input(argc - 1, argv + 1))
 		return (-1);
-	a = convert_to_list(argc, argv);
+	a = convert_to_list(argc - 1, argv + 1);
 	line = get_next_line(0);
 	check = run_checker(&a, &b, line);
 	if (check == -1)
