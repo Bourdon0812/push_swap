@@ -6,7 +6,7 @@
 /*   By: ilbonnev <ilbonnev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 13:42:31 by ilbonnev          #+#    #+#             */
-/*   Updated: 2025/01/15 17:00:49 by ilbonnev         ###   ########.fr       */
+/*   Updated: 2025/01/16 15:51:03 by ilbonnev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ int	main(int argc, char **argv)
 	size = 1;
 	if (!check_input(argc, argv))
 		return (-1);
-	a = convert_to_list(argc, argv, &size);
+	a = convert_to_list(argc - 1, argv + 1);
+	size = argc - 1;
 	b = NULL;
 	set_index(a, size + 1);
 	sort(&a, &b);

@@ -6,7 +6,7 @@
 /*   By: ilbonnev <ilbonnev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 14:32:48 by ilbonnev          #+#    #+#             */
-/*   Updated: 2025/01/15 17:17:04 by ilbonnev         ###   ########.fr       */
+/*   Updated: 2025/01/16 15:52:09 by ilbonnev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define PUSH_SWAP_H
 
 # include "get_next_line.h"
+# include <stdio.h>
 
 //ft_check_input.c
 int		check_input(int argc, char **argv);
@@ -22,7 +23,7 @@ int		check_input(int argc, char **argv);
 void	free_tab(char **array);
 char	arraylen(char **array);
 char	**split_args(int argc, char **argv, int *size);
-t_list	*convert_to_list(int argc, char **argv, int *size);
+t_list	*convert_to_list(int argc, char **argv);
 void	set_index(t_list *a, int size);
 
 //swap.c

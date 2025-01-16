@@ -6,7 +6,7 @@
 /*   By: ilbonnev <ilbonnev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 15:30:35 by ilbonnev          #+#    #+#             */
-/*   Updated: 2025/01/16 14:29:01 by ilbonnev         ###   ########.fr       */
+/*   Updated: 2025/01/16 15:52:31 by ilbonnev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,31 +61,32 @@ char	**split_args(int argc, char **argv, int *size)
 	return (split);
 }
 
-t_list	*convert_to_list(int argc, char **argv, int *size)
+t_list	*convert_to_list(int argc, char **argv)
 {
 	char	**split;
 	t_list	*new;
 	t_list	*args;
 	int		i;
 
-	split = split_args(argc, argv, size);
-	if (!split)
-		return (free_tab(split), split = NULL, NULL);
+	split = argv;
+	//split = split_args(argc, argv, size);
+	//if (!split)
+	//	return (free_tab(split), split = NULL, NULL);
 	args = NULL;
 	i = 0;
-	while (i < *size)
+	while (i < argc)
 	{
 		new = ft_lstnew(ft_atoi(split[i]));
 		if (!new)
 		{
 			ft_lstclear(&args);
-			free_tab(split);
+			//free_tab(split);
 			return (NULL);
 		}
 		ft_lstadd_back(&args, new);
 		i++;
 	}
-	free_tab(split);
+	//free_tab(split);
 	return (args);
 }
 
