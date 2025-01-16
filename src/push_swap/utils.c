@@ -6,7 +6,7 @@
 /*   By: ilbonnev <ilbonnev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 15:30:35 by ilbonnev          #+#    #+#             */
-/*   Updated: 2025/01/16 16:54:31 by ilbonnev         ###   ########.fr       */
+/*   Updated: 2025/01/16 17:16:25 by ilbonnev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,32 +33,6 @@ char	arraylen(char **array)
 	while (array[i])
 		i++;
 	return (i);
-}
-
-char	**split_args(int argc, char **argv, int *size)
-{
-	char	**split;
-	char	*str;
-	int		i;
-
-	str = ft_strdup("");
-	if (argc == 2)
-		str = ft_strjoin(str, argv[1]);
-	else
-	{
-		i = 0;
-		while (++i != argc)
-		{
-			str = ft_strjoin(str, " ");
-			str = ft_strjoin(str, argv[i]);
-		}
-	}
-	split = ft_split(str, ' ');
-	free(str);
-	if (split == NULL)
-		return (NULL);
-	*size = arraylen(split);
-	return (split);
 }
 
 t_list	*convert_to_list(int argc, char **argv)

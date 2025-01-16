@@ -6,7 +6,7 @@
 /*   By: ilbonnev <ilbonnev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 15:02:00 by ilbonnev          #+#    #+#             */
-/*   Updated: 2025/01/16 16:56:58 by ilbonnev         ###   ########.fr       */
+/*   Updated: 2025/01/16 17:17:40 by ilbonnev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,22 +94,21 @@ static int	check_dup(char **argv)
 
 int	check_input(int argc, char **argv)
 {
-	int		size;
 	char	**args;
 
-	size = 1;
 	if (argc <= 1)
 		return (0);
-	args = split_args(argc, argv, &size);
+	//args = split_args(argc, argv, &size);
+	args = argv;
 	if (!args)
-		return (free_tab(args), 0);
+		return (0);
 	if (!check_contains(args))
-		return (free_tab(args), 0);
+		return (0);
 	if (!check_int(args))
-		return (free_tab(args), 0);
+		return (0);
 	if (!check_max(args))
-		return (free_tab(args), 0);
+		return (0);
 	if (!check_dup(args))
-		return (free_tab(args), 0);
-	return (free_tab(args), 1);
+		return (0);
+	return (1);
 }

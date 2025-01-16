@@ -6,7 +6,7 @@
 #    By: ilbonnev <ilbonnev@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/13 13:26:12 by ilbonnev          #+#    #+#              #
-#    Updated: 2025/01/15 17:51:02 by ilbonnev         ###   ########.fr        #
+#    Updated: 2025/01/16 17:07:29 by ilbonnev         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,4 +63,7 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+bonus: $(CHECKER)
+	
+
+.PHONY: all clean fclean re bonus

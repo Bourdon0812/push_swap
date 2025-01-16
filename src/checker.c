@@ -6,7 +6,7 @@
 /*   By: ilbonnev <ilbonnev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 14:41:25 by ilbonnev          #+#    #+#             */
-/*   Updated: 2025/01/16 16:55:25 by ilbonnev         ###   ########.fr       */
+/*   Updated: 2025/01/16 17:46:14 by ilbonnev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,9 +49,7 @@ static int	run_checker(t_list **a, t_list **b, char *line)
 		if (check <= 0)
 		{
 			free(line);
-			ft_lstclear(a);
-			ft_lstclear(b);
-			return (check);
+			return (ft_lstclear(a), ft_lstclear(b), check);
 		}
 		if (ft_is_sorted(*a) && ft_lstsize(*b) <= 0)
 			break ;
@@ -76,7 +74,7 @@ int	main(int argc, char **argv)
 	int		check;
 
 	b = NULL;
-	if (!check_input(argc, argv))
+	if (!check_input(argc -1, argv + 1))
 		return (-1);
 	a = convert_to_list(argc, argv);
 	line = get_next_line(0);
