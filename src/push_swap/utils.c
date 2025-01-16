@@ -6,7 +6,7 @@
 /*   By: ilbonnev <ilbonnev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 15:30:35 by ilbonnev          #+#    #+#             */
-/*   Updated: 2025/01/16 15:52:31 by ilbonnev         ###   ########.fr       */
+/*   Updated: 2025/01/16 16:00:38 by ilbonnev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,9 +69,6 @@ t_list	*convert_to_list(int argc, char **argv)
 	int		i;
 
 	split = argv;
-	//split = split_args(argc, argv, size);
-	//if (!split)
-	//	return (free_tab(split), split = NULL, NULL);
 	args = NULL;
 	i = 0;
 	while (i < argc)

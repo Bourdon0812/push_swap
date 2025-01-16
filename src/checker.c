@@ -6,7 +6,7 @@
 /*   By: ilbonnev <ilbonnev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 14:41:25 by ilbonnev          #+#    #+#             */
-/*   Updated: 2025/01/15 17:48:38 by ilbonnev         ###   ########.fr       */
+/*   Updated: 2025/01/16 16:01:27 by ilbonnev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,14 +74,12 @@ int	main(int argc, char **argv)
 	t_list	*a;
 	t_list	*b;
 	char	*line;
-	int		size;
 	int		check;
 	
-	size = 1;
 	b = NULL;
 	if (!check_input(argc, argv))
 		return (-1);
-	a = convert_to_list(argc, argv, &size);
+	a = convert_to_list(argc, argv);
 	line = get_next_line(0);
 	check = run_checker(&a, &b, line);
 	if (check == -1)
