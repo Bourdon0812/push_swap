@@ -6,7 +6,7 @@
 /*   By: ilbonnev <ilbonnev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 15:02:00 by ilbonnev          #+#    #+#             */
-/*   Updated: 2025/01/16 17:17:40 by ilbonnev         ###   ########.fr       */
+/*   Updated: 2025/01/16 18:24:22 by ilbonnev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,6 @@ int	check_input(int argc, char **argv)
 
 	if (argc <= 1)
 		return (0);
-	//args = split_args(argc, argv, &size);
 	args = argv;
 	if (!args)
 		return (0);
