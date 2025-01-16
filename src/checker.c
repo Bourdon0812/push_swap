@@ -6,7 +6,7 @@
 /*   By: ilbonnev <ilbonnev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 14:41:25 by ilbonnev          #+#    #+#             */
-/*   Updated: 2025/01/16 16:01:27 by ilbonnev         ###   ########.fr       */
+/*   Updated: 2025/01/16 16:37:23 by ilbonnev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ static int	run_checker(t_list **a, t_list **b, char *line)
 
 	while (line != NULL)
 	{
-		ft_putstr_fd(line, 1);
+		//ft_putstr_fd(line, 1);
 		check = apply_operation(a, b, line);
 		if (check <= 0)
 		{
